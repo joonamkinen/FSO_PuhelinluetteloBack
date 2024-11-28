@@ -6,6 +6,8 @@ const app = express()
 
 app.use(express.json())
 
+
+
 morgan.token('body', (req, res) => {
       return JSON.stringify(req.body); // Log the request body for POST requests
 })
@@ -14,6 +16,8 @@ app.use(morgan(':method :url :status :response-time ms :body'));
 
 
 app.use(cors())
+
+app.use(express.static('dist'))
 
 let persons =[
     {
