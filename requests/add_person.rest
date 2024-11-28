@@ -1,6 +1,7 @@
-POST http://localhost:3001/api/persons
+POST https://fso-puhelinluetteloback.onrender.com/api/persons
 Content-Type: application/json
 
 {
+    "name": "Joona",
     "number":"040-123123"
 }
